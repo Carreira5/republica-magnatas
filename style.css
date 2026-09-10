@@ -1,0 +1,56 @@
+:root {
+    --cor-primaria: #FFD700;
+    --cor-secundaria: #E60000;
+    --cor-escura: #111111;
+    --cor-clara: #F8F9FA;
+    --cor-texto: #333333;
+    --fonte-padrao: system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-clara);
+    color: var(--cor-texto);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Garante foco visivel para navegacao por teclado */
+:focus {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;
+}
+
+/* Cabecalho e Menu Principal */
+header {
+    background-color: var(--cor-escura);
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--cor-primaria);
+    color: var(--cor-escura);
+}
