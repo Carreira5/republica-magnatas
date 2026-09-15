@@ -191,3 +191,51 @@ details[open] summary {
     font-size: 1.2rem;
     color: var(--cor-escura);
 }
+/* PÁGINA DE HISTÓRIA E DEPOIMENTOS */
+.historia-fundacao {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 4rem;
+    line-height: 1.8; /* Melhora a leitura do texto longo */
+}
+
+.historia-fundacao h2,
+.depoimentos h2 {
+    color: var(--cor-secundaria);
+    border-bottom: 3px solid var(--cor-primaria);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid para organizar os depoimentos lado a lado */
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Estilo do Cartão de Depoimento */
+.cartao-depoimento {
+    background-color: var(--cor-clara);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaria); /* Faixa lateral vermelha */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* A tag semântica de citação */
+.cartao-depoimento blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+}
+
+/* Nome do ex-morador alinhado à direita */
+.cartao-depoimento figcaption {
+    text-align: right;
+    color: var(--cor-escura);
+}
