@@ -137,3 +137,57 @@ details p {
 details[open] summary {
     color: var(--cor-secundaria);
 }
+/* PÁGINA DE MORADORES E FESTAS  */
+.categoria-galeria {
+    margin-bottom: 4rem;
+}
+
+.categoria-galeria h2 {
+    color: var(--cor-secundaria);
+    border-bottom: 3px solid var(--cor-primaria);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* O CSS Grid exigido para layout responsivo */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Estilo do cartão individual */
+.cartao-foto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de flutuar ao passar o mouse */
+.cartao-foto:hover {
+    transform: translateY(-5px);
+}
+
+/* Padronizando as fotos como quadrados perfeitos */
+.cartao-foto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #e0e0e0; /* Fundo cinza provisório */
+}
+
+/* Estilizando os textos do morador/festa */
+.cartao-foto figcaption {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+.cartao-foto figcaption strong {
+    font-size: 1.2rem;
+    color: var(--cor-escura);
+}
