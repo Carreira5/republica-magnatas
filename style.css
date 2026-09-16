@@ -150,20 +150,18 @@ details[open] summary {
     margin-bottom: 2rem;
 }
 
-/* O CSS Grid exigido para layout responsivo */
 .galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 2rem;
+    overflow-x: auto; /* Cria a rolagem horizontal */
+    padding: 1rem 0 2rem 0; /* Dá espaço para não cortar a sombra e para a barra de rolagem */
+    scroll-snap-type: x mandatory; /* Ativa o "imã" horizontal */
 }
 
-/* Estilo do cartão individual */
 .cartao-foto {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    /* MANTENHA o seu max-width, background, etc. Adicione apenas isto: */
+    flex: 0 0 auto; /* Impede que o cartão encolha para caber na tela */
+    scroll-snap-align: center; /* Puxa o cartão pro meio quando a rolagem para */
 }
 
 /* Efeito de flutuar ao passar o mouse */
@@ -174,8 +172,9 @@ details[open] summary {
 /* Padronizando as fotos como quadrados perfeitos */
 .cartao-foto img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    max-height: 350px;
+    object-fit: contain; 
+    border-radius: 8px 8px 0 0;
     background-color: #e0e0e0; /* Fundo cinza provisório */
 }
 
@@ -257,4 +256,16 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+/* Estilizando a barra de rolagem do carrossel */
+.galeria-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.galeria-grid::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 4px;
+}
+.galeria-grid::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria); /* Usa a cor principal do seu site */
+    border-radius: 4px;
 }
