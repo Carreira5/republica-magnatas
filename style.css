@@ -269,3 +269,22 @@ footer a:hover {
     background: var(--cor-primaria); /* Usa a cor principal do seu site */
     border-radius: 4px;
 }
+/* LOCALIZAÇÃO (MAPA INTERATIVO) */
+.localizacao {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Um fundo cinza super clarinho para destacar a seção */
+}
+
+.localizacao p {
+    margin-bottom: 2rem;
+    color: var(--cor-texto);
+}
+
+.mapa-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden; /* Força o mapa quadrado do Google a respeitar a borda arredondada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
