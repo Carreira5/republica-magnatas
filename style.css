@@ -288,3 +288,11 @@ footer a:hover {
     overflow: hidden; /* Força o mapa quadrado do Google a respeitar a borda arredondada */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+/* Estilo para separar os blocos de festas */
+.titulo-evento {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin: 3rem 0 1rem 0;
+    padding-left: 10px;
+    border-left: 4px solid var(--cor-primaria); /* Uma barrinha lateral vermelha estilosa */
+}
