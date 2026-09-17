@@ -122,20 +122,74 @@ details {
     border-radius: 4px;
 }
 
+/* FAQ (DÚVIDAS FREQUENTES) */
+
+
+details {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    overflow: hidden; /* Mantém o conteúdo dentro das bordas redondas */
+    transition: all 0.3s ease;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+    display: none;
+    content: "";
+}
+
 summary {
-    padding: 1rem;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    color: var(--cor-primaria); 
     font-weight: bold;
-    cursor: pointer; /* Muda o mouse para a maozinha de clique */
+    transition: transform 0.3s ease; 
+}
+
+summary:hover {
+    background-color: #fcfcfc;
+    color: var(--cor-primaria);
+}
+
+
+details[open] {
+    border-left: 5px solid var(--cor-primaria);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+details[open] summary {
+    border-bottom: 1px solid #eaeaea;
+    color: var(--cor-primaria);
+}
+
+details[open] summary::after {
+    content: "−"; 
+    transform: rotate(180deg);
 }
 
 details p {
-    padding: 0 1rem 1rem 1rem;
-    color: var(--cor-texto);
-}
-
-/* Muda a cor da pergunta quando ela esta aberta */
-details[open] summary {
-    color: var(--cor-secundaria);
+    padding: 1.5rem;
+    margin: 0;
+    color: #4a4a4a;
+    line-height: 1.6;
+    background-color: #fafafa; 
 }
 /* PÁGINA DE MORADORES E FESTAS  */
 .categoria-galeria {
@@ -209,11 +263,26 @@ details[open] summary {
     margin-bottom: 1.5rem;
 }
 
-/* Grid para organizar os depoimentos lado a lado */
-.depoimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* ESTRUTURA DE DEPOIMENTOS VERTICAIS */
+.lista-depoimentos {
+    display: flex;
+    flex-direction: column; 
+    gap: 3rem; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+.cartao-depoimento {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-left: 5px solid var(--cor-primaria); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    margin-bottom: 4rem; 
+    border-radius: 0 12px 12px 0;
+}
+
+.lista-depoimentos .cartao-depoimento {
+    padding: 2.5rem;
+    background-color: #fcfcfc;
 }
 
 /* Estilo do Cartão de Depoimento */
@@ -285,7 +354,7 @@ footer a:hover {
     max-width: 1000px;
     margin: 0 auto;
     border-radius: 12px;
-    overflow: hidden; /* Força o mapa quadrado do Google a respeitar a borda arredondada */
+    overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 /* Estilo para separar os blocos de festas */
@@ -295,4 +364,47 @@ footer a:hover {
     margin: 3rem 0 1rem 0;
     padding-left: 10px;
     border-left: 4px solid var(--cor-primaria); /* Uma barrinha lateral vermelha estilosa */
+}
+/* FOTO DO AUTOR NO DEPOIMENTO */
+.autor-depoimento {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 15px; 
+    margin-top: 2rem;
+}
+
+.dados-autor {
+    text-align: right;
+    color: #1a1a1a;
+}
+
+.foto-autor {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid var(--cor-primaria); 
+}
+/* TEXTOS E FOTOS DAS FESTAS */
+
+/* O parágrafo de introdução da festa */
+.descricao-evento {
+    font-size: 1.1rem;
+    color: #4a4a4a; 
+    margin-bottom: 2rem; 
+    line-height: 1.6;
+    max-width: 800px; 
+}
+
+/* As fotos das festas no carrossel  */
+.foto-festa {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 300px; 
+    width: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    background-color: #1a1a1a;
 }
