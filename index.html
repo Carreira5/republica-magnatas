@@ -4,74 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>República Magnatas | Home</title>
-    <!-- Conectando o arquivo CSS externo -->
+    
+    <link rel="preload" as="image" href="img/familiamag.jpeg" fetchpriority="high">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+   <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
     <header>
-        <nav>
+        <nav class="menu-principal">
+            <a href="index.html" class="link-logo">
+                <img src="img/logo-magnatas.webp" alt="Logo Magnatas" class="logo-mag">
+            </a>
+
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="moradores.html">Moradores & Festas</a></li>
-                <li><a href="historia.html">Hall da Fama</a></li>
+                <li><a href="moradores.html" >Moradores</a></li>
+                <li><a href="historia.html">Nossa Historia</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
     <main>
-    <!-- Destaque e Botão CTA -->
-    <section class="hero">
+   <!-- Destaque e Botão CTA -->
+    <section class="apresentacao">
         <h1>República Magnatas</h1>
         <p>A melhor experiência universitária da sua vida começa aqui.</p>
-        <a href="https://wa.me/5519995151477" class="btn-primario">Quero morar com vocês</a>
+        <a href="https://wa.me/5519995151477" class="btn-primario" target="_blank" rel="noopener noreferrer">Quero morar com vocês</a>
     </section>
     <!-- NOVA SEÇÃO: A CASA  -->
         <section class="categoria-galeria">
             <h2>Nossa Estrutura</h2>
+            <p class="descricao-casa">A nossa casa conta com 4 quartos e 4 banheiros, sendo 3 suites, sala de estar com 4 sofas, televisao com todos os streams, PS5 e WII, mesa de sinuca, ampla area externa com churrasqueira e sofas, uma cozinha totalmente equipada com utensilios e 3 geladeiras, lavanderia junto com a dispensa com espaco para guardar alimentos separados e duas maquinas de levar.</p>
             <div class="galeria-grid">
                 
                 <figure class="cartao-foto">
-                    <img src="" alt="Fachada da República Magnatas">
-                    <figcaption>A Fachada</figcaption>
+                    <img src="img/faixada.jpg" loading="lazy" alt="Fachada da República Magnatas">
                 </figure>
 
                 <figure class="cartao-foto">
-                    <img src="" alt="Área de churrasco e lazer da casa">
-                    <figcaption>Área de Lazer</figcaption>
+                    <img src="img/sala.jpg" loading="lazy" alt="Sala">
                 </figure>
 
                 <figure class="cartao-foto">
-                    <img src="" alt="Sala de estar e convivência">
-                    <figcaption>Sala de Estar</figcaption>
+                    <img src="img/sinuca.jpg" loading="lazy" alt="Sala">
                 </figure>
 
+                <figure class="cartao-foto">
+                    <img src="img/cozinha.jpg" loading="lazy" alt="Cozinha">
+                </figure>
+
+                 <figure class="cartao-foto">
+                    <img src="img/lavanderia.jpg" loading="lazy" alt="Lavanderia">
+                </figure>
+
+                 <figure class="cartao-foto">
+                    <img src="img/meuquarto.jpg" loading="lazy" alt="Quato da bagunca">
+                </figure>
+
+                 <figure class="cartao-foto">
+                    <img src="img/quartolove.jpg" loading="lazy" alt="Edicula">
+                </figure>
+
+                 <figure class="cartao-foto">
+                    <img src="img/quartobixos1.jpg" loading="lazy" alt="Quartao">
+                </figure>
+
+                 <figure class="cartao-foto">
+                    <img src="img/quartobixos2.jpg" loading="lazy" alt="Quartao">
+                </figure>
             </div>
         </section>
 
-    <!-- História e Cultura -->
-    <section class="cultura">
-        <h2>Nossa Cultura</h2>
-        <p>Aqui na Magnatas prezamos pelo respeito entre os moradores,boa convivencia,e claro aproveitar a vida universitaria ao maximo.</p>
-    </section>
-    <!-- NOVA SEÇÃO: LOCALIZAÇÃO -->
-        <section class="localizacao">
+    
+    <section class="localizacao">
             <h2>Onde Estamos</h2>
             <p>Excelente localização, perto da faculdade, mercados e dos melhores picos da cidade.</p>
             
             <div class="mapa-container">
-                <!-- código que o Google Maps gera -->
-                <iframe 
-                    src="https://maps.google.com/maps?q=Av.%20Roberto%20Simonsen,%201158&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <a href="https://maps.google.com/maps?q=Av.+Roberto+Simonsen,+1158+-+Sorocaba" target="_blank" rel="noopener noreferrer" title="Abrir localização no Google Maps">
+                    <img src="img/mapa.webp" alt="Mapa da República Magnatas." width="100%" height="400" loading="lazy" style="object-fit: cover; border-radius: 8px; transition: transform 0.3s ease;">
+                </a>
             </div>
         </section>
 
@@ -80,7 +95,7 @@
         <h2>Dúvidas Frequentes</h2>
         <details>
             <summary>Como as contas são divididas?</summary>
-            <p>Todas as despesas fixas são somadas e divididas entre os moradores,temos uma planilha para organizar o financeiro da casa e deixar tudo explicado para os moradores da onde surgiu cada custo daquele mes.</p>
+            <p>Todas as despesas fixas são somadas e divididas entre os moradores, temos uma planilha para organizar o financeiro da casa e deixar tudo explicado para os moradores da onde surgiu cada custo daquele mes.</p>
         </details>
         <details>
             <summary>Tem regra de faxina?</summary>
@@ -96,7 +111,7 @@
         </details>
         <details>
             <summary>Qual a distancia ate o campus da faculdade?</summary>
-            <p>Depende, atualmente temos um sistema de caronas que demora cerca de 5 minutos para chegar no campus, mas tmbem vamos de onibus que demora cerca de 25 minutos.</p>
+            <p>Depende, atualmente temos um sistema de caronas que demora cerca de 5 minutos para chegar no campus, mas tambem vamos de onibus que demora cerca de 25 minutos.</p>
         </details>
         <details>
             <summary>Como funciona a compra de mantimentos para a casa?</summary>
@@ -109,11 +124,22 @@
     </section>
     </main>
 
-    <!-- RODAPÉ DA PÁGINA -->
-    <footer>
-        <p>Av. Roberto Simonsen 1158 |</p>
-        <p>Acompanhe nosso dia a dia no <a href="https://www.instagram.com/magnatasrepublica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></p>
-        <a href="#top">Voltar ao topo</a>
+    <footer class="rodape-oficial">
+        <div class="rodape-conteudo">
+            <div class="rodape-info">
+                <h3>República Magnatas</h3>
+                <p>Av. Roberto Simonsen, 1158 - Sorocaba, SP</p>
+                <p>Acompanhe nosso dia a dia no <a href="https://www.instagram.com/magnatasrepublica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+            </div>
+            
+            <div class="rodape-logo">
+                <img src="img/logo-unesp.webp" alt="Selo UNESP" class="logo-unesp">
+            </div>
+        </div>
+        
+        <div class="rodape-base">
+            <a href="#top">↑ Voltar ao topo</a>
+        </div>
     </footer>
 
 </body>
