@@ -61,19 +61,34 @@ main {
     margin: 0 auto;
 }
 
-/* Secao de destaque (Fundo amarelo) */
-.hero {
-    text-align: center;
+/* BANNER PRINCIPAL  */
+.apresentacao { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/familiamag.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Letras brancas */
+    padding: 6rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-bottom: 4rem;
-    padding: 4rem 1rem;
-    background-color: var(--cor-primaria);
-    border-radius: 8px;
+    
+    /* Adicionei estas linhas para jogar o texto e o botão perfeitamente para o meio: */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    color: var(--cor-escura);
+.apresentacao h1 {
+    font-size: 3rem;
+    color: #ffffff; /* Garante que o título fique branco */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombrinha no texto pra facilitar a leitura */
     margin-bottom: 1rem;
+}
+
+.apresentacao p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 /* Transformando link em botao */
@@ -207,9 +222,9 @@ details p {
 .galeria-grid {
     display: flex;
     gap: 2rem;
-    overflow-x: auto; /* Cria a rolagem horizontal */
-    padding: 1rem 0 2rem 0; /* Dá espaço para não cortar a sombra e para a barra de rolagem */
-    scroll-snap-type: x mandatory; /* Ativa o "imã" horizontal */
+    overflow-x: auto; 
+    padding: 1rem 0 2rem 0; 
+    scroll-snap-type: x mandatory; 
 }
 
 .cartao-foto {
@@ -223,13 +238,13 @@ details p {
     transform: translateY(-5px);
 }
 
-/* Padronizando as fotos como quadrados perfeitos */
 .cartao-foto img {
     width: 100%;
-    max-height: 350px;
-    object-fit: contain; 
+    height: 350px; 
+    object-fit: cover; 
+    object-position: center top; 
+    background-color: #1a1a1a;
     border-radius: 8px 8px 0 0;
-    background-color: #e0e0e0; /* Fundo cinza provisório */
 }
 
 /* Estilizando os textos do morador/festa */
@@ -407,4 +422,115 @@ footer a:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     object-fit: cover;
     background-color: #1a1a1a;
+
+}
+
+/* CABEÇALHO E LOGO MAGNATAS*/
+.menu-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.logo-mag {
+    height: 40px; 
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-mag:hover {
+    transform: scale(1.05); /* Efeito legal ao passar o mouse na logo */
+}
+
+/* RODAPÉ  */
+.rodape-oficial {
+    background-color: #020202;
+    color: #f1f1f1;
+    padding: 2.5rem 2rem 1rem 2rem; /* Cortamos quase pela metade a altura (antes era 4rem) */
+    margin-top: 4rem; 
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem; /* Menos espaço até a linha divisória */
+    margin-bottom: 1rem;
+}
+
+.rodape-info h3 {
+    color: var(--cor-secundaria); /* Amarelo */
+    margin-bottom: 10px;
+}
+
+.rodape-info p {
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+.rodape-info a {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+.logo-unesp {
+    height: 60px; 
+    filter:  brightness(200%); 
+    opacity: 0.8;
+}
+
+.rodape-base {
+    text-align: center;
+}
+
+.rodape-base a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.rodape-base a:hover {
+    color: var(--cor-primaria); 
+}
+
+.mapa-container img {
+    display: block; 
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.mapa-container a:hover img {
+    transform: scale(1.02); 
+}
+
+/* CABEÇALHO HORIZONTAL ADAPTADO (CELULAR)*/
+@media (max-width: 768px) {
+    .menu-principal {
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 10px 5px; 
+    }
+
+    .link-logo img {
+        max-width: 45px;
+    }
+
+    .menu-principal ul {
+        flex-wrap: nowrap; 
+        gap: 2px; 
+    }
+
+    .menu-principal ul li a {
+        padding: 6px 8px; 
+        font-size: 13px; 
+    }
 }
