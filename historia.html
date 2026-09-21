@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>República Magnatas | Hall da Fama</title>
+    <title>República Magnatas | Nossa Historia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+   <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
     <header>
-        <nav>
+        <nav class="menu-principal">
+            <a href="index.html" class="link-logo">
+                <img src="img/logo-magnatas.png" alt="Logo Magnatas" class="logo-mag">
+            </a>
+        
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="moradores.html">Moradores & Festas</a></li>
-                <li><a href="historia.html" aria-current="page">Hall da Fama</a></li>
+                <li><a href="moradores.html" >Moradores</a></li>
+                <li><a href="historia.html" aria-current="page">Nossa Historia</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="titulo-pagina">
-            <h1>Hall da Fama e Nossa História</h1>
+            <h1>Um pouco da nossa história</h1>
             <p>O legado deixado por quem ajudou a construir a Magnatas.</p>
         </section>
 
@@ -52,7 +57,7 @@ Morar em república é, ao mesmo tempo, acolhedor e desafiador. É aprender a co
                     </blockquote>
         <div class="autor-depoimento">
             <!-- Lembre-se de colocar a foto dele na pasta img! -->
-            <img src="img/osmose.jpeg" alt="Foto de Renan Osmose" class="foto-autor">
+            <img src="img/osmose.jpeg" loading="lazy" alt="Foto de Renan Osmose" class="foto-autor">
             <div class="dados-autor">
                 <strong>Renan de Paula "Osmose"</strong><br>
                 <span>Engenharia de Controle e Automacao - Turma 018</span>
@@ -65,10 +70,26 @@ Morar em república é, ao mesmo tempo, acolhedor e desafiador. É aprender a co
                         Morar em uma república é uma experiência transformadora da vida universitária, pois estabelece o equilíbrio entre a preparação profissional e o crescimento pessoal. Enquanto a faculdade garante as hard skills com sua base acadêmica e teórica, a rotina sob o mesmo teto desenvolve soft skills, onde se aprende na prática sobre empatia, inteligência emocional, escuta e negociação. Conviver com amigos de todos os cantos expande horizontes e ensina a valorizar a diversidade no cotidiano. Além disso, permite desenvolver um grupo de estudos para encarar as madrugadas de estudo para as provas, formando uma rede de contatos e networking para o futuro. Entre conversas espontâneas e desafios compartilhados, essa vivência proporciona momentos únicos que transformam simples colegas de casa em uma segunda família e em amigos para a vida toda.
                     </blockquote>
         <div class="autor-depoimento">
-            <img src="img/semente.jpeg" alt="Foto de Matheus" class="foto-autor">
+            <img src="img/semente.jpeg" loading="lazy" alt="Foto de Matheus" class="foto-autor">
             <div class="dados-autor">
                 <strong>Matheus Armelin "Semente"</strong><br>
                 <span>Engenharia de Controle e Automacao - Turma 018</span>
+            </div>
+        </div>
+                </figure>
+
+                <figure class="cartao-depoimento">
+                    <blockquote>
+                       Morar na mag foi uma experiência única em minha vida, fazer parte de uma casa com várias pessoas diferentes me deu uma nova perspectiva sobre amizades e responsabilidades, além sobre o valor de coisas que nem imaginava que sentia falta (comida da minha mãe e aspirador de pó kkkk).
+Acredito que toda pessoa deve ter a experiência de morar em uma república para aprender sobre coisas que só a vida ensina.
+Tenho muita saudade de tudo oq já vive mas feliz dos frutos que a república esta me fazendo colher.
+Agradeço a todos os moradores e ex que fazem parte dessa história
+                    </blockquote>
+        <div class="autor-depoimento">
+            <img src="img/resgate.jpeg" loading="lazy" alt="Foto de Ryan" class="foto-autor">
+            <div class="dados-autor">
+                <strong>Ryan Ramos "Resgate"</strong><br>
+                <span>Engenharia Ambiental - Turma 018</span>
             </div>
         </div>
                 </figure>
@@ -77,10 +98,23 @@ Morar em república é, ao mesmo tempo, acolhedor e desafiador. É aprender a co
         </section>
     </main>
 
-    <footer>
-        <p>Av. Roberto Simonsen 1158 |</p>
-        <p>Acompanhe nosso dia a dia no <a href="https://www.instagram.com/magnatasrepublica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></p>
-        <a href="#top">Voltar ao topo</a>
+  
+    <footer class="rodape-oficial">
+        <div class="rodape-conteudo">
+            <div class="rodape-info">
+                <h3>República Magnatas</h3>
+                <p>Av. Roberto Simonsen, 1158 - Sorocaba, SP</p>
+                <p>Acompanhe nosso dia a dia no <a href="https://www.instagram.com/magnatasrepublica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+            </div>
+            
+            <div class="rodape-logo">
+                <img src="img/logo-unesp.png" alt="Selo UNESP" class="logo-unesp">
+            </div>
+        </div>
+        
+        <div class="rodape-base">
+            <a href="#top">↑ Voltar ao topo</a>
+        </div>
     </footer>
 
 </body>
