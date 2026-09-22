@@ -61,7 +61,7 @@ main {
     margin: 0 auto;
 }
 
-/* BANNER PRINCIPAL  */
+/* BANNER DE INICIO  */
 .apresentacao { 
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/familiamag.jpeg');
     background-size: cover;
@@ -72,7 +72,6 @@ main {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-bottom: 4rem;
     
-    /* Adicionei estas linhas para jogar o texto e o botão perfeitamente para o meio: */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,8 +80,8 @@ main {
 
 .apresentacao h1 {
     font-size: 3rem;
-    color: #ffffff; /* Garante que o título fique branco */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombrinha no texto pra facilitar a leitura */
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
     margin-bottom: 1rem;
 }
 
@@ -109,14 +108,14 @@ main {
     background-color: var(--cor-escura);
     transform: scale(1.05);
 }
-/* Secoes de Cultura e FAQ em formato de cartoes */
+/* Secao FAQ em formato de cartoes */
 .cultura,
 .faq {
     margin-bottom: 3rem;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra bem leve e elegante */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
 }
 
 /* Titulos com sublinhado amarelo */
@@ -129,16 +128,7 @@ main {
     padding-bottom: 0.5rem;
 }
 
-/* Estilo das perguntas clicaveis */
-details {
-    margin-bottom: 1rem;
-    background-color: var(--cor-clara);
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-}
-
-/* FAQ (DÚVIDAS FREQUENTES) */
-
+/* FAQ  */
 
 details {
     background-color: #ffffff;
@@ -146,7 +136,7 @@ details {
     margin-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border: 1px solid #eaeaea;
-    overflow: hidden; /* Mantém o conteúdo dentro das bordas redondas */
+    overflow: hidden; 
     transition: all 0.3s ease;
 }
 
@@ -206,6 +196,7 @@ details p {
     line-height: 1.6;
     background-color: #fafafa; 
 }
+
 /* PÁGINA DE MORADORES E FESTAS  */
 .categoria-galeria {
     margin-bottom: 4rem;
@@ -228,9 +219,8 @@ details p {
 }
 
 .cartao-foto {
-    /* MANTENHA o seu max-width, background, etc. Adicione apenas isto: */
-    flex: 0 0 auto; /* Impede que o cartão encolha para caber na tela */
-    scroll-snap-align: center; /* Puxa o cartão pro meio quando a rolagem para */
+    flex: 0 0 auto; 
+    scroll-snap-align: center; 
 }
 
 /* Efeito de flutuar ao passar o mouse */
@@ -259,6 +249,7 @@ details p {
     font-size: 1.2rem;
     color: var(--cor-escura);
 }
+
 /* PÁGINA DE HISTÓRIA E DEPOIMENTOS */
 .historia-fundacao {
     background-color: #ffffff;
@@ -266,7 +257,7 @@ details p {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     margin-bottom: 4rem;
-    line-height: 1.8; /* Melhora a leitura do texto longo */
+    line-height: 1.8; 
 }
 
 .historia-fundacao h2,
@@ -286,30 +277,18 @@ details p {
     max-width: 900px; 
     margin: 0 auto; 
 }
-.cartao-depoimento {
-    background-color: #ffffff;
-    padding: 3rem;
-    border-left: 5px solid var(--cor-primaria); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    margin-bottom: 4rem; 
-    border-radius: 0 12px 12px 0;
-}
-
-.lista-depoimentos .cartao-depoimento {
-    padding: 2.5rem;
-    background-color: #fcfcfc;
-}
 
 /* Estilo do Cartão de Depoimento */
 .cartao-depoimento {
     background-color: var(--cor-clara);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
-    border-left: 5px solid var(--cor-secundaria); /* Faixa lateral vermelha */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--cor-secundaria); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4rem; 
 }
 
-/* A tag semântica de citação */
+/* Depoimento */
 .cartao-depoimento blockquote {
     font-size: 1.1rem;
     font-style: italic;
@@ -322,25 +301,7 @@ details p {
     text-align: right;
     color: var(--cor-escura);
 }
-/* ESTILO DO RODAPÉ  */
-footer {
-    background-color: #1a1a1a; /* Fundo bem escuro e elegante */
-    color: #ffffff;
-    text-align: center;
-    padding: 3rem 2rem;
-    margin-top: 5rem;
-    line-height: 1.8;
-}
 
-footer a {
-    color: var(--cor-primaria);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 /* Estilizando a barra de rolagem do carrossel */
 .galeria-grid::-webkit-scrollbar {
     height: 8px;
@@ -350,14 +311,14 @@ footer a:hover {
     border-radius: 4px;
 }
 .galeria-grid::-webkit-scrollbar-thumb {
-    background: var(--cor-primaria); /* Usa a cor principal do seu site */
+    background: var(--cor-primaria); 
     border-radius: 4px;
 }
-/* LOCALIZAÇÃO (MAPA INTERATIVO) */
+/* LOCALIZAÇÃO */
 .localizacao {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: #f9f9f9; /* Um fundo cinza super clarinho para destacar a seção */
+    background-color: #f9f9f9; 
 }
 
 .localizacao p {
@@ -378,9 +339,10 @@ footer a:hover {
     color: #1a1a1a;
     margin: 3rem 0 1rem 0;
     padding-left: 10px;
-    border-left: 4px solid var(--cor-primaria); /* Uma barrinha lateral vermelha estilosa */
+    border-left: 4px solid var(--cor-primaria); 
 }
-/* FOTO DO AUTOR NO DEPOIMENTO */
+
+/* FOTO NO DEPOIMENTO */
 .autor-depoimento {
     display: flex;
     align-items: center;
@@ -442,14 +404,14 @@ footer a:hover {
 }
 
 .logo-mag:hover {
-    transform: scale(1.05); /* Efeito legal ao passar o mouse na logo */
+    transform: scale(1.05); 
 }
 
 /* RODAPÉ  */
 .rodape-oficial {
     background-color: #020202;
     color: #f1f1f1;
-    padding: 2.5rem 2rem 1rem 2rem; /* Cortamos quase pela metade a altura (antes era 4rem) */
+    padding: 2.5rem 2rem 1rem 2rem; 
     margin-top: 4rem; 
 }
 
@@ -460,7 +422,7 @@ footer a:hover {
     max-width: 1000px;
     margin: 0 auto;
     border-bottom: 1px solid #333;
-    padding-bottom: 1.5rem; /* Menos espaço até a linha divisória */
+    padding-bottom: 1.5rem; 
     margin-bottom: 1rem;
 }
 
@@ -512,7 +474,7 @@ footer a:hover {
     transform: scale(1.02); 
 }
 
-/* CABEÇALHO HORIZONTAL ADAPTADO (CELULAR)*/
+/* CABEÇALHO PARA CELULAR */
 @media (max-width: 768px) {
     .menu-principal {
         flex-direction: row; 
