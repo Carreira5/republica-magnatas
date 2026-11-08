@@ -15,8 +15,17 @@
     <main class="container-painel">
         <section class="seccao-painel">
             <h2>Mural de Avisos</h2>
+            
+            <!-- Formulário para criar novos avisos -->
+            <div class="formulario-adicionar">
+                <input type="text" id="tituloAviso" placeholder="Título do Aviso" required>
+                <textarea id="mensagemAviso" placeholder="O que queres avisar à malta?" required></textarea>
+                <button id="btnCriarAviso" class="btn-vermelho pequeno">Publicar Aviso</button>
+            </div>
+
+            <!-- Lista onde os avisos vão aparecer -->
             <div id="listaAvisos" class="conteudo-dinamico">
-                <!-- Os avisos vão aparecer aqui via JavaScript -->
+                <!-- Os avisos vão aparecer aqui -->
             </div>
         </section>
 

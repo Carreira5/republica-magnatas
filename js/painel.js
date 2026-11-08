@@ -51,3 +51,38 @@ async function carregarDados() {
 
 // Quando a página abre, ele roda a função automaticamente
 carregarDados();
+// 4. Criar um novo Aviso
+document.getElementById('btnCriarAviso').addEventListener('click', async () => {
+    const titulo = document.getElementById('tituloAviso').value;
+    const mensagem = document.getElementById('mensagemAviso').value;
+
+    if (!titulo || !mensagem) {
+        alert('Por favor, preenche o título e a mensagem.');
+        return;
+    }
+
+    try {
+        const resposta = await fetch('http://localhost:3000/api/avisos', {
+            method: 'POST', // Estamos a enviar dados (Criar)
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Mostra a pulseira VIP
+            },
+            body: JSON.stringify({ titulo: titulo, mensagem: mensagem })
+        });
+
+        if (resposta.ok) {
+            // Limpa as caixas de texto
+            document.getElementById('tituloAviso').value = '';
+            document.getElementById('mensagemAviso').value = '';
+            
+            // Recarrega a lista para o novo aviso aparecer magicamente na hora!
+            carregarDados();
+        } else {
+            alert('Erro ao criar o aviso.');
+        }
+    } catch (erro) {
+        console.error(erro);
+        alert('Erro de conexão ao tentar publicar.');
+    }
+});

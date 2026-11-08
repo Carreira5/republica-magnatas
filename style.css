@@ -579,3 +579,26 @@ details p {
     width: auto;
     padding: 5px 15px;
 }
+
+/* Estilos dos formulários internos do painel */
+.formulario-adicionar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.formulario-adicionar input, 
+.formulario-adicionar textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.formulario-adicionar textarea {
+    resize: vertical;
+    min-height: 60px;
+}
