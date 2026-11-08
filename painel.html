@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Morador - Magnatas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-painel">
+        <h1>Área do Morador - Magnatas</h1>
+        <button id="btnSair" class="btn-vermelho pequeno">Sair</button>
+    </header>
+
+    <main class="container-painel">
+        <section class="seccao-painel">
+            <h2>Mural de Avisos</h2>
+            <div id="listaAvisos" class="conteudo-dinamico">
+                <!-- Os avisos vão aparecer aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section class="seccao-painel">
+            <h2>Quadro de Faxina</h2>
+            <div id="listaFaxina" class="conteudo-dinamico">
+                <!-- As tarefas de faxina vão aparecer aqui -->
+            </div>
+        </section>
+
+        <section class="seccao-painel">
+            <h2>Despesas do Mês</h2>
+            <div id="listaDespesas" class="conteudo-dinamico">
+                <!-- As despesas vão aparecer aqui -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/painel.js"></script>
+</body>
+</html>

@@ -536,3 +536,46 @@ details p {
 
 .mensagem-erro { color: red; margin-top: 10px; font-weight: bold; }
 .mensagem-sucesso { color: green; margin-top: 10px; font-weight: bold; }
+
+/* =========================================
+   ESTILOS DO PAINEL DO MORADOR
+   ========================================= */
+.header-painel {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-painel {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.seccao-painel {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.seccao-painel h2 {
+    border-bottom: 2px solid #d11111;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.conteudo-dinamico {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-vermelho.pequeno {
+    width: auto;
+    padding: 5px 15px;
+}
