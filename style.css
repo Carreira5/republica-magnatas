@@ -538,67 +538,116 @@ details p {
 .mensagem-sucesso { color: green; margin-top: 10px; font-weight: bold; }
 
 /* =========================================
-   ESTILOS DO PAINEL DO MORADOR
+   ESTILOS DO PAINEL DO MORADOR (VERSÃO PREMIUM)
    ========================================= */
+body {
+    background-color: #f4f7f6; /* Fundo geral mais suave que dá contraste aos cartões */
+}
+
 .header-painel {
-    background-color: #111;
+    background: linear-gradient(135deg, #111111 0%, #2c3e50 100%);
     color: white;
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .container-painel {
-    padding: 20px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .seccao-painel {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06); /* Sombra 3D elegante */
+    border-top: 5px solid #d11111; /* Detalhe com a cor da república */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seccao-painel:hover {
+    transform: translateY(-5px); /* Efeito flutuante subtil */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 .seccao-painel h2 {
-    border-bottom: 2px solid #d11111;
-    padding-bottom: 10px;
-    color: #333;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
-.conteudo-dinamico {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #555;
-}
-
-.btn-vermelho.pequeno {
-    width: auto;
-    padding: 5px 15px;
-}
-
-/* Estilos dos formulários internos do painel */
+/* Área de introdução de dados mais destacada */
 .formulario-adicionar {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
+    gap: 12px;
 }
 
 .formulario-adicionar input, 
 .formulario-adicionar textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
     font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.formulario-adicionar input:focus, 
+.formulario-adicionar textarea:focus {
+    border-color: #d11111;
+    box-shadow: 0 0 0 3px rgba(209, 17, 17, 0.1); /* Brilho vermelho ao focar */
+    outline: none;
 }
 
 .formulario-adicionar textarea {
     resize: vertical;
-    min-height: 60px;
+    min-height: 80px;
+}
+
+/* Botões com gradiente e animação */
+.btn-vermelho {
+    background: linear-gradient(135deg, #d11111 0%, #9e0b0b 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(209, 17, 17, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-vermelho:hover {
+    background: linear-gradient(135deg, #e81313 0%, #b30c0c 100%);
+    box-shadow: 0 6px 15px rgba(209, 17, 17, 0.4);
+    transform: translateY(-2px); /* Botão sobe ligeiramente */
+}
+
+.btn-vermelho.pequeno {
+    padding: 10px 15px;
+}
+
+.conteudo-dinamico {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
