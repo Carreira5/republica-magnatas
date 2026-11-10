@@ -716,3 +716,141 @@ body {
 .btn-recusar:hover {
     background-color: #c82333; /* Fica um vermelho mais escuro ao passar o mouse */
 }
+
+/* --- ESTILOS DO QUADRO DE FAXINA --- */
+.card-faxina {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Dá uma sombra bem leve e moderna */
+}
+
+.acoes-faxina {
+    display: flex;
+    align-items: center;
+}
+
+.btn-concluido {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+/* Caso não tenha criado ainda a lixeira */
+.btn-apagar-faxina {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.btn-apagar-faxina:hover {
+    transform: scale(1.2);
+}
+
+/* --- CABEÇALHO DO PAINEL --- */
+.cabecalho-painel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1a252f;
+    color: white;
+}
+
+.cabecalho-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a logo e o texto */
+}
+
+.logo-painel {
+    height: 50px; /* Ajuste este valor para deixar a logo maior ou menor */
+    width: auto;
+}
+
+.cabecalho-esquerda h2 {
+    margin: 0;
+}
+
+.nav-painel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-inicio {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-inicio:hover {
+    color: #f1c40f; /* Fica dourado ao passar o mouse */
+}
+
+.btn-sair {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #c82333;
+}
+
+/* --- FUNDOS DAS TELAS DE ACESSO --- */
+/* Altere 'foto-login.jpg' e 'foto-cadastro.jpg' para o nome exato das suas fotos na pasta img */
+
+.bg-login {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/foto-login.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.bg-cadastro {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/foto-cadastro.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.btn-voltar-flutuante {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Mudou para o topo direito! */
+    background-color: #f1c40f; /* Dourado */
+    color: #000; /* Texto preto para dar leitura no dourado */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Dá uma sombrinha para destacar da foto */
+}
+
+.btn-voltar-flutuante:hover {
+    background-color: #8b0000; /* Vermelho escuro/Magnatas */
+    color: #fff; /* Texto fica branco */
+    transform: scale(1.05); /* Dá um leve zoom ao passar o rato */
+}
