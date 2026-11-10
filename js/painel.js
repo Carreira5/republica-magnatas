@@ -279,7 +279,10 @@ async function carregarPendentes() {
                             <small>${p.email}</small>
                         </div>
                         <button onclick="aprovar(${p.id}, this)" class="btn-aprovar">
-                            Aprovar Morador
+                            Aprovar 
+                        </button>
+                        <button onclick="recusar(${p.id}, this)" class="btn-recusar">
+                            Recusar
                         </button>
                     </div>
                 `;
@@ -319,3 +322,34 @@ window.aprovar = async function(id, botaoClicado) {
         }
     }
 };
+
+async function recusar(id, botaoClicado) {
+    if(confirm('Tem a certeza que deseja recusar e apagar este cadastro?')) {
+        
+        // Efeito visual imediato: desativa o botão para evitar duplo clique
+        botaoClicado.disabled = true;
+        botaoClicado.innerText = 'Recusando...';
+
+        try {
+            const resposta = await fetch(`http://localhost:3000/api/usuarios/${id}/recusar`, {
+                method: 'DELETE',
+                headers: { 'Authorization': 'Bearer ' + localStorage.getItem('tokenMagnatas') }
+            });
+
+            if (resposta.ok) {
+                // Se deu certo, recarrega a caixinha verde
+                carregarPendentes(); 
+            } else {
+                const erro = await resposta.json();
+                alert(erro.erro || 'Erro ao recusar calouro.');
+                botaoClicado.disabled = false;
+                botaoClicado.innerText = 'Recusar';
+            }
+        } catch (erro) {
+            console.error('Erro na requisição:', erro);
+            alert('Falha na comunicação com o servidor.');
+            botaoClicado.disabled = false;
+            botaoClicado.innerText = 'Recusar';
+        }
+    }
+}

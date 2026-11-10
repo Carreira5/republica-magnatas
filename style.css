@@ -700,3 +700,19 @@ body {
     background: #64748b !important;
     cursor: not-allowed;
 }
+
+.btn-recusar {
+    background-color: #dc3545; /* Vermelho padrão de erro/recusa */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px; /* Para ficar arredondado igual o de aprovar */
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px; /* Dá um espacinho do botão de aprovar */
+    transition: background-color 0.3s;
+}
+
+.btn-recusar:hover {
+    background-color: #c82333; /* Fica um vermelho mais escuro ao passar o mouse */
+}
