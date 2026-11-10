@@ -8,11 +8,18 @@
 </head>
 <body>
     <header class="header-painel">
-        <h1>Área do Morador - Magnatas</h1>
+        <h1 id="tituloBoasVindas">Área do Morador - Magnatas</h1>
         <button id="btnSair" class="btn-vermelho pequeno">Sair</button>
     </header>
 
     <main class="container-painel">
+        <!-- CAIXA EXCLUSIVA DO ADMIN (Escondida por padrão) -->
+        <section id="caixaAdmin" class="caixa-admin" style="display: none;">
+            <h3 class="titulo-admin">👑 Painel da Administração: Solicitações Pendentes</h3>
+            <div id="listaPendentes">
+                <!-- Os visitantes aparecerão aqui magicamente -->
+            </div>
+        </section>
         <section class="seccao-painel">
             <h2>Mural de Avisos</h2>
             
@@ -33,8 +40,12 @@
             <h2>Quadro de Faxina</h2>
             <div class="formulario-adicionar">
                 <input type="text" id="descFaxina" placeholder="O que é para limpar? (ex: Cozinha)" required>
+                <!-- NOVA CAIXA DE SELEÇÃO -->
+                <select id="responsavelFaxina" required style="padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    <option value="">Carregando moradores...</option>
+                </select>
                 <input type="date" id="dataFaxina" required>
-                <button id="btnCriarFaxina" class="btn-vermelho pequeno">Adicionar Tarefa</button>
+                <button id="btnCriarFaxina" class="btn-vermelho pequeno">Delegar Tarefa</button>
             </div>
             <div id="listaFaxina" class="conteudo-dinamico">
                 <!-- As tarefas vão aparecer aqui -->
@@ -46,12 +57,12 @@
             <div id="resumoFinanceiro" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; border: 1px solid #27ae60;">
                 <!-- O JavaScript vai injetar a matemática aqui -->
             </div>
-            
+
             <div class="formulario-adicionar">
                 <input type="text" id="tipoDespesa" placeholder="Tipo (Luz, Água, Mercado)" required>
                 <input type="text" id="descDespesa" placeholder="Descrição rápida" required>
                 <input type="number" id="valorDespesa" step="0.01" placeholder="Valor (R$)" required>
-                <button id="btnCriarDespesa" class="btn-vermelho pequeno">Registar Despesa</button>
+                <button id="btnCriarDespesa" class="btn-vermelho pequeno">Registrar Despesa</button>
             </div>
             <div id="listaDespesas" class="conteudo-dinamico">
                 <!-- As despesas vão aparecer aqui -->
@@ -59,6 +70,6 @@
         </section>
     </main>
 
-    <script src="js/painel.js"></script>
+    <script src="js/painel.js?v=999"></script>
 </body>
 </html>
