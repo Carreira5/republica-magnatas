@@ -651,3 +651,52 @@ body {
     flex-direction: column;
     gap: 15px;
 }
+
+/* ========================================= */
+/* PAINEL DE ADMINISTRAÇÃO                   */
+/* ========================================= */
+.caixa-admin {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #27ae60;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-admin {
+    color: #27ae60;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card-pendente {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #f39c12;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-aprovar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-aprovar:hover {
+    background: #219653; /* Fica mais escuro ao passar o rato */
+}
+
+.btn-aprovando {
+    background: #64748b !important;
+    cursor: not-allowed;
+}
