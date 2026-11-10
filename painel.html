@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-painel">
-        <h1 id="tituloBoasVindas">Área do Morador - Magnatas</h1>
-        <button id="btnSair" class="btn-vermelho pequeno">Sair</button>
-    </header>
+    <header class="cabecalho-painel">
+    <div class="cabecalho-esquerda">
+        <!-- Confirme se o nome e o caminho da sua imagem da logo estão corretos aqui -->
+        <img src="img/logo-magnatas.webp" alt="Logo Magnatas" class="logo-painel">
+        <h2>Área do Morador - Magnatas</h2>
+    </div>
+    
+    <div class="nav-painel">
+        <a href="index.html" class="link-inicio">🏠 Início</a>
+        <button onclick="fazerLogout()" class="btn-sair">SAIR</button>
+    </div>
+</header>
 
     <main class="container-painel">
         <!-- CAIXA EXCLUSIVA DO ADMIN (Escondida por padrão) -->
@@ -38,7 +46,7 @@
 
         <section class="seccao-painel">
             <h2>Quadro de Faxina</h2>
-            <div class="formulario-adicionar">
+            <div id="form-faxina" class="formulario-adicionar">
                 <input type="text" id="descFaxina" placeholder="O que é para limpar? (ex: Cozinha)" required>
                 <!-- NOVA CAIXA DE SELEÇÃO -->
                 <select id="responsavelFaxina" required style="padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px;">
@@ -63,6 +71,9 @@
                 <input type="text" id="descDespesa" placeholder="Descrição rápida" required>
                 <input type="number" id="valorDespesa" step="0.01" placeholder="Valor (R$)" required>
                 <button id="btnCriarDespesa" class="btn-vermelho pequeno">Registrar Despesa</button>
+                <button id="btn-zerar-despesas" onclick="zerarDespesas()" style="display: none; width: 100%; background-color: #8b0000; color: white; border: none; padding: 10px; margin-top: 15px; cursor: pointer; font-weight: bold; border-radius: 4px;">
+    ⚠️ Zerar Todas as Contas do Mês
+</button>
             </div>
             <div id="listaDespesas" class="conteudo-dinamico">
                 <!-- As despesas vão aparecer aqui -->
